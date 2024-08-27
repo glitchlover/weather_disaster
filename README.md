@@ -1,7 +1,5 @@
-
-# Flutter App Project
-
-## Clean Code Architecture
+ 
+# Clean Code Architecture
 
 We're using Clean Code Architecture to ensure our app is scalable, maintainable, and testable. Here's an overview of our file structure:
 
@@ -27,6 +25,7 @@ lib/
 |    |   │   ├── widgets/
 |    |   │   ├── theme/
 |    |   │   ├── routes/
+|    |   │   ├── shared/
 └── main.dart
 ```
 
@@ -35,27 +34,54 @@ lib/
 - `domain/`: Defines business logic and entities.
 - `presentation/`: Manages UI components and state.
 
-## GetX State Management and Routing
+> [!question] Where to start?  
+> 👉 Start form `main.dart`.
+
+
+# Responsive Builder
+
+To ensure responsiveness and adaptability of the app please be introduced with a light weight flutter package `responsive_builder`. With this you will easily work with mobile, tablet and desktop device of various sizes (small, medium, large and extra large).
+
+**Features it introduces are:**
+- Orientation Layout
+- Responsive Builder
+- Screen Type Layout
+- Responsive Sizing
+
+
+# GetX State Management and Routing
 
 We're using GetX for state management and routing. Here are some key points:
 
-1. Controllers: Place controllers in `lib/presentation/controllers/`.
-2. Dependency Injection: Use `Get.put()` or `Get.lazyPut()` for dependency injection.
+1. Controllers: Place controllers in `app/presentation/controllers/x_controller.dart`.
+2. Dependency Injection: Use `Get.put()` or `Get.lazyPut()` for dependency injection and put it in `app/presentation/controllers/x_binding.dart.
 3. Reactive State Management: Use `Rx` variables and `.obs` for reactive programming.
+	- *Example*: `Rx<String> text = "".obs;`
 4. Navigation: Use `Get.to()`, `Get.off()`, etc., for navigation.
 
 Example of a GetX controller:
 
+`app/presentation/controllers/home_controller.dart`
 ```dart
 class HomeController extends GetxController {
-  var count = 0.obs;
+  RxInt count = 0.obs;
   
   void increment() => count++;
 }
 ```
 
-For routing, define your routes in `lib/routes/app_pages.dart`:
+Add Binding in 
+`app/presentation/shared/bindings/home_binding.dart`:
+```dart
+class HomeBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.put(HomeScreenController());
+  }
+}
+```
 
+For routing, define your routes in `app/presentation/shared/routes/app_pages.dart`:
 ```dart
 class AppPages {
   static final routes = [
@@ -71,7 +97,7 @@ class AppPages {
 Certainly. I'll add a section to the README specifically about GetX controllers. Here's an expanded version of the README with more details on GetX controllers:
 
 
-### GetX Controllers
+## GetX Controllers
 
 Controllers are a crucial part of the GetX ecosystem. They manage the state and business logic of your app.
 
@@ -171,7 +197,7 @@ final homeController = Get.find<HomeController>();
 Remember to keep your controllers focused on a single responsibility and avoid making them too large. If a controller is growing too big, consider splitting it into multiple controllers.
 
 
-## Isar Database Management
+# Isar Database Management
 
 We're using Isar for local data persistence. Here's how to work with it:
 
@@ -208,16 +234,12 @@ Remember to close the Isar instance when it's no longer needed:
 await isar.close();
 ```
 
-## Getting Started
-
-1. Clone this repository
-2. Run `flutter pub get` to install dependencies
-3. Set up your development environment (VS Code or Android Studio recommended)
-4. Start coding!
+---
 
 For more detailed information on these topics, please refer to the official documentation:
 
 - [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+- [Responsive Builder](https://pub.dev/packages/responsive_builder).
 - [GetX Package](https://pub.dev/packages/get)
 - [Isar Database](https://isar.dev/tutorials/quickstart.html)
 
