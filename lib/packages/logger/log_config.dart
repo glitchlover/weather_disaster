@@ -1,1 +1,1 @@
-part of flog;
+part of 'logger.dart';

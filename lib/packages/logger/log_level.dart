@@ -1,4 +1,4 @@
-part of flog;
+part of 'logger.dart';
 
 /// Supported log levels.
 enum LogLevel {
