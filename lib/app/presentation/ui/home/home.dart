@@ -1,4 +1,6 @@
+library home;
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -9,8 +11,12 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home'),
       ),
-      body: const Center(
-        child: Text('Scaffold Body'),
+      body: ResponsiveBuilder(
+        builder: (context, sizing) {
+          return const Center(
+            child: Text('Scaffold Body'),
+          );
+        }
       ),
     );
   }

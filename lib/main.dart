@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:weather_disaster/app/presentation/ui/home/home.dart';
+import 'package:weather_disaster/app/presentation/shared/routes/app_routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +11,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      title: "Weather Disaster",
+      getPages: AppRoutes.pages,
+      initialRoute: AppRoutes.initial,
     );
   }
 }
