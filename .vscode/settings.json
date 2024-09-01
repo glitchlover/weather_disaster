@@ -18,5 +18,7 @@
         ".vscode": true,
         "lib\\app\\database": true,
         "lib\\app\\domain": true
-    }
+    },
+    "pieces.cloudCapabilities": "Blended",
+    "pieces.telemetry": true
 }

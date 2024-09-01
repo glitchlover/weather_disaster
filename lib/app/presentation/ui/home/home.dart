@@ -1,6 +1,18 @@
 library home;
+
+import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:weather_disaster/app/presentation/shared/theme/sizes.dart';
+import 'package:weather_disaster/app/presentation/shared/widgets/circled_icon_button.dart';
+import 'widgets/map_view.dart';
+
+part 'widgets/map_focus_floating_button.dart';
+part 'widgets/search_floating_button.dart';
+part 'widgets/weather_and_statistics_floating_button.dart';
+part 'widgets/user_account_circled_icon_floating_button.dart';
+part 'widgets/help_floating_button.dart';
+part 'widgets/more_expandable_floating_button.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -8,16 +20,18 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home'),
-      ),
-      body: ResponsiveBuilder(
-        builder: (context, sizing) {
-          return const Center(
-            child: Text('Scaffold Body'),
-          );
-        }
-      ),
-    );
+      body: ResponsiveBuilder(builder: (context, sizing) {
+        return const Stack(
+          children: [
+            MapView(), 
+            UserAccountCircledIconFloatingButton(),
+            WeatherAndStatisticsFloatingButton(),
+            SearchFloatingButton(),
+            HelpFloatingButton(),
+            MoreExpandableFloatingButton(),
+            MapFocusFloatingButton()
+        ]
+      );
+    }));
   }
 }
