@@ -10,7 +10,7 @@ class HelpFloatingButton extends StatelessWidget {
     return const Positioned(
         top: 20,
         right: 20,
-        child: CircledIconButton(icon: BootstrapIcons.question),
+        child: CircledIconButton(icon: BootstrapIcons.question,),
     );
   }
 }
