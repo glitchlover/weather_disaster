@@ -1,4 +1,9 @@
-part of '../home.dart';
+
+import 'package:flutter/material.dart';
+import 'package:line_icons/line_icons.dart';
+import 'package:responsive_builder/responsive_builder.dart';
+import 'package:weather_disaster/app/presentation/shared/theme/colors.dart';
+import 'package:weather_disaster/app/presentation/shared/widgets/app_navigation_icon.dart';
 
 class AppNavigationBar extends StatelessWidget {
   const AppNavigationBar({
@@ -11,9 +16,16 @@ class AppNavigationBar extends StatelessWidget {
       bottom: 0,
       child: ResponsiveBuilder(
           builder: (BuildContext context, SizingInformation sizingInformation) {
-        return SizedBox(
+        return Container(
           width: sizingInformation.screenSize.width,
           height: 60,
+          decoration: const BoxDecoration(boxShadow: [
+            BoxShadow(
+              color: Colors.black45,
+              blurRadius: 6.0,
+              offset: Offset(0, 3),
+            ),
+          ]),
           child: _buildNavBar(),
         );
       }),
@@ -48,10 +60,7 @@ class AppNavigationBar extends StatelessWidget {
             onPressed: () {},
           ),
           AppNavigationIcon(
-            icon: LineIcons.cog,
-            color: Colors.grey, 
-            onPressed: () {}
-          ),
+              icon: LineIcons.cog, color: Colors.grey, onPressed: () {}),
         ],
       ),
     );

@@ -3,14 +3,12 @@ library home;
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:weather_disaster/app/presentation/shared/theme/colors.dart';
 import 'package:weather_disaster/app/presentation/shared/theme/sizes.dart';
-import 'package:weather_disaster/app/presentation/shared/widgets/app_navigation_icon.dart';
+import 'package:weather_disaster/app/presentation/shared/widgets/app_navigation_bar.dart';
 import 'package:weather_disaster/app/presentation/shared/widgets/circled_icon_button.dart';
 
 import 'widgets/map_view.dart';
 
-part 'widgets/app_navigation_bar.dart';
 part 'widgets/help_floating_button.dart';
 part 'widgets/map_focus_floating_button.dart';
 part 'widgets/more_expandable_floating_button.dart';

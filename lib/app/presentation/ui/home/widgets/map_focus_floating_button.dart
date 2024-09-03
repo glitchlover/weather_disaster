@@ -10,7 +10,7 @@ class MapFocusFloatingButton extends StatelessWidget {
     return const Positioned(
       left: 20,
       bottom: 20 + 60,
-      child: CircledIconButton(icon: BootstrapIcons.zoom_in),
+      child: CircledIconButton(icon: LineIcons.eye),
     );
   }
 }
