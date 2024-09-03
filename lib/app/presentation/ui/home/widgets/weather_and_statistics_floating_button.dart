@@ -10,6 +10,6 @@ class WeatherAndStatisticsFloatingButton extends StatelessWidget {
     return const Positioned(
         top: 20,
         left: 20 + 25 + AppSizes.marginSmall,
-        child: CircledIconButton(icon: BootstrapIcons.activity));
+        child: CircledIconButton(icon: LineIcons.barChartAlt));
   }
 }

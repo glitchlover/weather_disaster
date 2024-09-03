@@ -7,7 +7,7 @@ class UserAccountCircledIconFloatingButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const IconData icon = BootstrapIcons.person;
+    const IconData icon = LineIcons.user;
 
     return const Positioned(
         top: 20, left: 20, child: CircledIconButton(icon: icon));

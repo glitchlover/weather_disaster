@@ -27,16 +27,16 @@ class _MoreExpandableFloatingButtonState
       right: 20,
       child: Column(
         children: [
-          CircledIconButton(icon: BootstrapIcons.three_dots, onTap: _toggleButton,),
+          CircledIconButton(icon: LineIcons.horizontalEllipsis, onTap: _toggleButton,),
           if (_isExpanded) ...[
             const SizedBox(height: AppSizes.marginSmall,),
-            const CircledIconButton(icon: BootstrapIcons.people),
+            const CircledIconButton(icon: LineIcons.alternateMapMarker),
             const SizedBox(height: AppSizes.marginSmall,),
-            const CircledIconButton(icon: BootstrapIcons.bag_heart),
+            const CircledIconButton(icon: LineIcons.fruitApple),
             const SizedBox(height: AppSizes.marginSmall,),
-            const CircledIconButton(icon: BootstrapIcons.heart_pulse),
+            const CircledIconButton(icon: LineIcons.medicalClinic),
             const SizedBox(height: AppSizes.marginSmall,),
-            const CircledIconButton(icon: BootstrapIcons.building_check),
+            const CircledIconButton(icon: LineIcons.home),
           ],
         ],
       ),

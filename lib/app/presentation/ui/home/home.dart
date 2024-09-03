@@ -1,6 +1,5 @@
 library home;
 
-import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:responsive_builder/responsive_builder.dart';

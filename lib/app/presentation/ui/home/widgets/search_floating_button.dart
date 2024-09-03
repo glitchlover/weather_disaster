@@ -10,6 +10,6 @@ class SearchFloatingButton extends StatelessWidget {
     return const Positioned(
         top: 20,
         left: 20 + (25 + AppSizes.marginSmall) * 2,
-        child: CircledIconButton(icon: Icons.search_rounded));
+        child: CircledIconButton(icon: LineIcons.search));
   }
 }
