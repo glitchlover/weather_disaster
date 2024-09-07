@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_disaster/app/presentation/shared/theme/colors.dart';
-import 'package:weather_disaster/app/presentation/shared/theme/sizes.dart';
+import 'package:weather_disaster/core/constants/sizes.dart';
 
 import 'custom_list_tile.dart';
 

@@ -3,7 +3,7 @@ library home;
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:weather_disaster/app/presentation/shared/theme/sizes.dart';
+import 'package:weather_disaster/core/constants/sizes.dart';
 import 'package:weather_disaster/app/presentation/shared/widgets/app_navigation_bar.dart';
 import 'package:weather_disaster/app/presentation/shared/widgets/circled_icon_button.dart';
 

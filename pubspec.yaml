@@ -7,9 +7,11 @@ environment:
   sdk: '>=3.4.3 <4.0.0'
 
 dependencies:
+  eitherx: ^2.0.1
   flutter:
     sdk: flutter
   flutter_map: ^7.0.2
+  geolocator: ^13.0.1
   get: ^4.6.6
   http: ^1.2.1
   isar: ^3.1.0+1

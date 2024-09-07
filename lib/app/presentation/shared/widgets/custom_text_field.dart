@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather_disaster/app/presentation/shared/theme/sizes.dart';
+import 'package:weather_disaster/core/constants/sizes.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({

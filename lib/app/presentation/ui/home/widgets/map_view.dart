@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:get/get.dart';
 import 'package:latlong2/latlong.dart';
+import 'package:weather_disaster/app/presentation/ui/home/controllers/map_view_controller.dart';
 
-class MapView extends StatelessWidget {
+class MapView extends GetView<MapViewController> {
   const MapView({
     super.key,
   });
@@ -10,9 +12,11 @@ class MapView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlutterMap(
-      options: const MapOptions(
+      mapController: controller.mapController,
+      options: MapOptions(
         initialCenter: LatLng(23.684994, 90.356331), // Center the map over London
         initialZoom: 12.8,
+        onTap: (tapPosition, latLang){},
       ),
       children: [
         TileLayer( // Display map tiles from any source

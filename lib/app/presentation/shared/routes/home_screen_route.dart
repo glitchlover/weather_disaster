@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:weather_disaster/app/presentation/shared/bindings/home_bindings.dart';
 import 'package:weather_disaster/app/presentation/ui/home/home.dart';
 
 class HomeScreenRoute {
@@ -7,6 +8,6 @@ class HomeScreenRoute {
   GetPage page = GetPage(
     name: path,
     page: () => const Home(),
-    // binding: HomeBindings()
+    binding: HomeBindings(),
   );
 }
